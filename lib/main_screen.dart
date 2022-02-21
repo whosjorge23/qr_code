@@ -16,6 +16,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Welcome ${convertedData['username']}"),
+        // title: Text("Welcome username"),
       ),
       body: Center(
         child: !_text
@@ -23,10 +24,48 @@ class MainScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    Text("Getway IP: ${convertedData['gateway_ip']}"),
-                    Text("API URL: ${convertedData['api_url']}"),
-                    Text(
-                        "Auth Token: ${convertedData['local_temp_auth_token']}"),
+                    // Text("Getway IP: ${convertedData['gateway_ip']}"),
+                    // Text("API URL: ${convertedData['api_url']}"),
+                    // Text(
+                    //     "Auth Token: ${convertedData['local_temp_auth_token']}"),
+                    Card(
+                      elevation: 4,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white24,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                        child:
+                            Text("Getway IP: ${convertedData['gateway_ip']}"),
+                      ),
+                    ),
+                    Card(
+                      elevation: 4,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white24,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                        child: Text("API URL: ${convertedData['api_url']}"),
+                      ),
+                    ),
+                    Card(
+                      elevation: 4,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white24,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                        child: Text(
+                            "Auth Token: ${convertedData['local_temp_auth_token']}"),
+                      ),
+                    ),
                   ],
                 ),
               )
