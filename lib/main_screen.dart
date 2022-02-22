@@ -38,7 +38,7 @@ class MainScreen extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 40),
                         child:
-                            Text("Getway IP: ${convertedData['gateway_ip']}"),
+                            Text("Gateway IP: ${convertedData['gateway_ip']}"),
                       ),
                     ),
                     Card(

@@ -106,14 +106,33 @@ class _LoginScreenState extends State<LoginScreen> {
           //     await controller?.toggleFlash();
           //     setState(() {});
           //   },
-          //   icon: FutureBuilder<bool?>(future: controller?getFlashStatus(),builder: (context, snapshot) { if(snapshot.data != null) {return Icon(snapshot.data! ? Icons.flash_on : Icons.flash_off);}else{return Container();}},),
+          //   icon: FutureBuilder<bool?>(
+          //     future: controller!.getFlashStatus(),
+          //     builder: (context, snapshot) {
+          //       if (snapshot.data != null) {
+          //         return Icon(
+          //             snapshot.data! ? Icons.flash_on : Icons.flash_off);
+          //       } else {
+          //         return Container();
+          //       }
+          //     },
+          //   ),
           // ),
           // IconButton(
           //   onPressed: () async {
           //     await controller?.flipCamera();
           //     setState(() {});
           //   },
-          //   icon: FutureBuilder<bool?>(future: controller?getFlashStatus(),builder: (context, snapshot) { if(snapshot.data != null) {return Icon(Icons.switch_camera);}else{return Container();}},),
+          //   icon: FutureBuilder<CameraFacing>(
+          //     future: controller!.flipCamera(),
+          //     builder: (context, snapshot) {
+          //       if (snapshot.data != null) {
+          //         return Icon(Icons.switch_camera);
+          //       } else {
+          //         return Container();
+          //       }
+          //     },
+          //   ),
           // ),
         ],
       ),
